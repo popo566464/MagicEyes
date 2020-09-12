@@ -5,8 +5,8 @@ import numpy as np
 class playcard_detect():
     def __init__(self):        
         self.net = cv2.dnn.readNet("Asset\yolocards_608.weights", "Asset\yolocards.cfg")
-        self.net.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
-        self.net.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
+        #self.net.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
+        #self.net.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
         with open("Asset\cards.names", "r") as f:
             self.classes = [line.strip() for line in f.readlines()]
         self.output_layers = self.net.getUnconnectedOutLayersNames()       

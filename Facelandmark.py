@@ -46,6 +46,8 @@ class face_detect():
     
             if x_l > 0 and y_l > 0:
                 draw_iris(frame, x_l, y_l)
+                
+                #print((x_l, y_l))
             if x_r > 0 and y_r > 0:
                 draw_iris(frame, x_r, y_r)
     
@@ -61,7 +63,7 @@ class face_detect():
             return frame, (0,0), (0,0)
         else:
             return frame, (x_l, y_l) , (x_r, y_r)
-
+            #print((x_l, y_l))
 
         
 '''
